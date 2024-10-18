@@ -24,25 +24,25 @@ const config = {
 
 app.get("/", async (req, res) => {
 
-    res.render("index.ejs", {a: "Waiting for data"});
+    res.render("index.ejs", {artists: "Waiting for data"});
 })
 
 
 
 app.post("/get-data", async (req, res) => {
-try {
-const response = await axios.get(API_URL, config);
-const result = response.data
-const artistUrl = result.artists.artist.map(artist => artist.url);
-
-
-res.render("index.ejs", { artists: artistUrl });
-}catch(error) {
-res.render("index.ejs", {artists: error.message});
-console.log(error);
-}
-
+    try {
+        const response = await axios.get(API_URL, config);
+        const result = response.data;
+        
+        // Sanatçılara ait verileri al
+        const artists = result.artists.artist.map(artist => artist.name); // Sadece isimleri al
+        res.render("index.ejs", { artists: artists }); // Burada artists dizisini gönderiyoruz
+    } catch (error) {
+        res.render("index.ejs", { artists: [] }); // Hata durumunda boş dizi gönderiyoruz
+        console.log(error);
+    }
 });
+
 
 
 

@@ -6,24 +6,18 @@
 <body>
     <h1>Sanatçılar</h1>
 
-    <% if (artists.length > 0) { %>
+    <% if (Array.isArray(artists) && artists.length > 0) { %> <!-- Dizi ve uzunluğu kontrol ediliyor -->
         <ul>
             <% artists.forEach(artist => { %>
                 <li><%= artist %></li>
             <% }); %>
         </ul>
     <% } else { %>
-        <p>Sanatçı verisi yok.</p>
+        <p>Veriler bekleniyor.</p>
     <% } %>
 
     <form id="myForm" method="post">
         <input id="get" type="submit" value="Veri Getir" formaction="/get-data">
     </form>
 </body>
-</html>
-
-
-
-
-
 </html>
