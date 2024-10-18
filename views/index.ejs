@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Top Artists</title>
+</head>
+<body>
+    <h1>Sanatçılar</h1>
+
+    <% if (artists.length > 0) { %>
+        <ul>
+            <% artists.forEach(artist => { %>
+                <li><%= artist %></li>
+            <% }); %>
+        </ul>
+    <% } else { %>
+        <p>Sanatçı verisi yok.</p>
+    <% } %>
+
+    <form id="myForm" method="post">
+        <input id="get" type="submit" value="Veri Getir" formaction="/get-data">
+    </form>
+</body>
+</html>
+
+
+
+
+
+</html>
