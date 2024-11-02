@@ -10,8 +10,8 @@
 <li>Displays the current date and time formatted according to the user's local time zone.</li>
 
 <h2>Setup 🛠️ </h2>
-<code>git clone https://github.com/safaygt/myAPIproject.git</code>
-<code>cd myAPIproject</code>
+<p><code>git clone https://github.com/safaygt/myAPIproject.git</code></p>
+<p><code>cd myAPIproject</code></p>
 
 <h2>Install the required packages</h2>
 <code>npm install</code>
