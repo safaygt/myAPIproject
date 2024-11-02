@@ -10,11 +10,11 @@
 <li>Güncel tarih ve saati, kullanıcının yerel zaman dilimine göre biçimlendirilmiş şekilde görüntüler.</li>
 
 <h2>Kurulum 🛠️ </h2>
-<p>git clone https://github.com/safaygt/myAPIproject.git</p>
-<p>cd myAPIproject</p>
+<code>git clone https://github.com/safaygt/myAPIproject.git</code>
+<code>cd myAPIproject</code>
 
 <h2>Gerekli paketleri kurun</h2>
-<p>npm install</p>
+<code>npm install</code>
 
 
 <h2> Weatherstack API Anahtarını Ekleyin </h2>
@@ -23,3 +23,7 @@
 <p>index.js dosyasında, API_KEY değişkenine kendi API anahtarınızı ekleyin:</p>
 
 <code> const API_KEY = 'Sizin_API_Anahtarınız'; </code>
+
+<h2>Sunucuyu Başlatın</h2>
+<code>nodemon index.js</code>
+<p>Uygulamanız artık <strong>http://localhost:3000</strong> adresinde çalışıyor olmalıdır.</p>
