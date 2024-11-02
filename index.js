@@ -2,50 +2,39 @@ import express from "express";
 import axios from "axios";
 import bodyParser from "body-parser";
 
-
 const app = express();
-const port = 3000;
-const API_URL = "http://ws.audioscrobbler.com/2.0/";
-const api_key = "1c7924a07e51f21b0ae54fdd4d5edf32";
+const PORT = 3000;
 
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
+// Weatherstack API key
+const API_KEY = '33457fe91598a3020f47a9fd39a80ba0';
 
+app.get('/', (req, res) => {
+    res.render('index.ejs', { weather: null });
+});
 
+app.post('/weather', async (req, res) => {
+    const city = req.body.city;
+    const url = `http://api.weatherstack.com/current?access_key=${API_KEY}&query=${city}`;
 
-const config = {
-    params: { 
-    'method': 'chart.gettopartists',
-    'api_key': api_key,
-    'format': 'json'
-}
-}
-
-app.get("/", async (req, res) => {
-
-    res.render("index.ejs", {artists: "Waiting for data"});
-})
-
-
-
-app.post("/get-data", async (req, res) => {
     try {
-        const response = await axios.get(API_URL, config);
-        const result = response.data;
-        
-        // Sanatçılara ait verileri al
-        const artists = result.artists.artist.map(artist => artist.name); // Sadece isimleri al
-        res.render("index.ejs", { artists: artists }); // Burada artists dizisini gönderiyoruz
+        const response = await axios.get(url);
+        const weatherData = response.data;
+        if (weatherData.success === false) {
+            return res.render('index.ejs', { weather: null });
+        }
+        if (!weatherData || !weatherData.location) {
+            return res.render('index.ejs', { weather: null, error: "Result not found" });
+        }
+        res.render('index.ejs', { weather: weatherData });
     } catch (error) {
-        res.render("index.ejs", { artists: [] }); // Hata durumunda boş dizi gönderiyoruz
-        console.log(error);
+        console.error('Error fetching weather data:', error);
+        res.render('index.ejs', { weather: null });
     }
 });
 
-
-
-
-app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
 });
