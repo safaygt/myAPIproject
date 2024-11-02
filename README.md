@@ -3,7 +3,7 @@
 
 Weathery, kullanıcıların şehir adına göre güncel hava durumu bilgilerini alabileceği basit bir Node.js tabanlı hava durumu uygulamasıdır. Bu uygulama, Weatherstack API'si ile entegre olup, kullanıcılara sıcaklık, hissedilen sıcaklık, rüzgar hızı, yönü ve güncel hava durumu gibi bilgileri sunar. 
 
-<ul>Özellikler 📋</ul> 
+<h2>Özellikler 📋</h2> 
 <li>Kullanıcılar şehir adı girerek, seçilen şehir için güncel hava durumu bilgilerini görebilir.</li>
 <li>Sıcaklık, hissedilen sıcaklık, rüzgar hızı, rüzgar yönü ve hava durumu ikonlarını içerir.</li>
 <li>Güncel tarih ve saati, kullanıcının yerel zaman dilimine göre biçimlendirilmiş şekilde görüntüler.</li>
