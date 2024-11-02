@@ -28,7 +28,7 @@
 <code> const API_KEY = 'YourAPIKey'; </code>
 
 <h2>Start Server</h2>
-<code>nodemon index.js</code>
+<p><code>nodemon index.js</code></p>
 <p>Your application should now be running at <strong>http://localhost:3000</strong>.</p>
 
 
