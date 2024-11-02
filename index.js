@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 // Weatherstack API key
-const API_KEY = '33457fe91598a3020f47a9fd39a80ba0';
+const API_KEY = 'YOURAPIKEY';
 
 app.get('/', (req, res) => {
     res.render('index.ejs', { weather: null });
