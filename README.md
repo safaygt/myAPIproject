@@ -22,8 +22,21 @@
 <p>Weatherstack API kullanmak için ücretsiz bir API anahtarı alabilirsiniz: <a href="https://weatherstack.com/"> Weatherstack. </a> </p>
 <p>index.js dosyasında, API_KEY değişkenine kendi API anahtarınızı ekleyin:</p>
 
+
+
+
 <code> const API_KEY = 'Sizin_API_Anahtarınız'; </code>
 
 <h2>Sunucuyu Başlatın</h2>
 <code>nodemon index.js</code>
 <p>Uygulamanız artık <strong>http://localhost:3000</strong> adresinde çalışıyor olmalıdır.</p>
+
+
+
+<h2>Kullanılan Teknolojiler 🛠️</h2>
+
+
+<li>Node.js ve Express.js - Sunucu ve API isteklerini işlemek için. </li>
+<li>EJS - Sayfa şablonlama motoru olarak.</li>
+<li>Bootstrap - UI tasarımı ve sayfa düzeni.</li>
+<li>Weatherstack API - Hava durumu verisi sağlamak için.</li>
