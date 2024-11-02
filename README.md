@@ -1,7 +1,8 @@
 <h1>Weathery 🌤️</h1> 
 
 
-Weathery, kullanıcıların şehir adına göre güncel hava durumu bilgilerini alabileceği basit bir Node.js tabanlı hava durumu uygulamasıdır. Bu uygulama, Weatherstack API'si ile entegre olup, kullanıcılara sıcaklık, hissedilen sıcaklık, rüzgar hızı, yönü ve güncel hava durumu gibi bilgileri sunar. 
+<p>Weathery, kullanıcıların şehir adına göre güncel hava durumu bilgilerini alabileceği basit bir Node.js tabanlı hava durumu uygulamasıdır. </p>
+<p>Bu uygulama, Weatherstack API'si ile entegre olup, kullanıcılara sıcaklık, hissedilen sıcaklık, rüzgar hızı, yönü ve güncel hava durumu gibi bilgileri sunar. </p>
 
 <h2>Özellikler 📋</h2> 
 <li>Kullanıcılar şehir adı girerek, seçilen şehir için güncel hava durumu bilgilerini görebilir.</li>
@@ -13,10 +14,10 @@ Weathery, kullanıcıların şehir adına göre güncel hava durumu bilgilerini 
 <p>cd myAPIproject</p>
 
 <h2>Gerekli paketleri kurun</h2>
-npm install
+<p>npm install</p>
 
 
 <h2> Weatherstack API Anahtarını Ekleyin </h2>
 
-Weatherstack API kullanmak için ücretsiz bir API anahtarı alabilirsiniz: Weatherstack.
+Weatherstack API kullanmak için ücretsiz bir API anahtarı alabilirsiniz: <a href="https://weatherstack.com/"> Weatherstack. </a>
 index.js dosyasında, API_KEY değişkenine kendi API anahtarınızı ekleyin:
